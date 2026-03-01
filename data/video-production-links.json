@@ -137,6 +137,33 @@
       ]
     },
     {
+      "id": "coding",
+      "name": "Coding & AI Assistants",
+      "icon": "💻",
+      "projects": [
+        {
+          "emoji": "📝",
+          "name": "HTML Online Viewer",
+          "external": "https://html.onlineviewer.net/"
+        },
+        {
+          "emoji": "☁️",
+          "name": "Claude AI",
+          "external": "https://claude.ai/"
+        },
+        {
+          "emoji": "🐦",
+          "name": "Grok AI",
+          "external": "https://grok.com/"
+        },
+        {
+          "emoji": "✨",
+          "name": "Gemini AI",
+          "external": "https://gemini.google.com/"
+        }
+      ]
+    },
+    {
       "id": "search",
       "name": "Quick Search",
       "icon": "🔍",
