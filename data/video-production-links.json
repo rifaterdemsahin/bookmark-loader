@@ -1,0 +1,158 @@
+{
+  "categories": [
+    {
+      "id": "planning",
+      "name": "Planning & Strategy",
+      "icon": "📝",
+      "projects": [
+        {
+          "emoji": "📊",
+          "name": "Maturity Matrix",
+          "github": "https://github.com/rifaterdemsahin/video-production-maturity-matrix",
+          "live": "https://rifaterdemsahin.github.io/video-production-maturity-matrix/"
+        },
+        {
+          "emoji": "📅",
+          "name": "Weekly Plan",
+          "github": "https://github.com/rifaterdemsahin/VideoProductionPlanNovemberWeek3",
+          "live": "https://rifaterdemsahin.github.io/VideoProductionPlanNovemberWeek3/"
+        },
+        {
+          "emoji": "🛠️",
+          "name": "Production Pipeline",
+          "github": "https://github.com/rifaterdemsahin/VideoProductionPipeline",
+          "live": "https://rifaterdemsahin.github.io/VideoProductionPipeline/"
+        },
+        {
+          "emoji": "🧠",
+          "name": "Self Learning Framework",
+          "github": "https://github.com/rifaterdemsahin/SelfLearningFramework",
+          "live": "https://rifaterdemsahin.github.io/SelfLearningFramework/"
+        }
+      ]
+    },
+    {
+      "id": "animation",
+      "name": "Animation & Graphics",
+      "icon": "✨",
+      "projects": [
+        {
+          "emoji": "🎨",
+          "name": "Lower Thirds",
+          "github": "https://github.com/rifaterdemsahin/transparent-lowerthird",
+          "live": "https://rifaterdemsahin.github.io/transparent-lowerthird/"
+        },
+        {
+          "emoji": "🎞️",
+          "name": "Diagram Anims",
+          "github": "https://github.com/rifaterdemsahin/diagram-animations",
+          "live": "https://rifaterdemsahin.github.io/diagram-animations/"
+        },
+        {
+          "emoji": "📐",
+          "name": "Manim Engine",
+          "github": "https://github.com/rifaterdemsahin/Manim",
+          "live": "https://rifaterdemsahin.github.io/Manim/"
+        },
+        {
+          "emoji": "🍭",
+          "name": "Lottie Files",
+          "github": "https://github.com/rifaterdemsahin/lottie-animations",
+          "live": "https://rifaterdemsahin.github.io/lottie-animations/"
+        },
+        {
+          "emoji": "🎥",
+          "name": "Remotion Core",
+          "github": "https://github.com/rifaterdemsahin/remotion",
+          "live": "https://rifaterdemsahin.github.io/remotion/"
+        }
+      ]
+    },
+    {
+      "id": "automation",
+      "name": "Automation & AI",
+      "icon": "🤖",
+      "projects": [
+        {
+          "emoji": "🦙",
+          "name": "Ollama AI",
+          "github": "https://github.com/rifaterdemsahin/ollama",
+          "live": "https://rifaterdemsahin.github.io/ollama/"
+        },
+        {
+          "emoji": "🔗",
+          "name": "n8n Workflows",
+          "github": "https://github.com/rifaterdemsahin/n8n",
+          "live": "https://rifaterdemsahin.github.io/n8n/"
+        },
+        {
+          "emoji": "🖼️",
+          "name": "Gemini Generator",
+          "github": "https://github.com/rifaterdemsahin/GeminiImageGenerator",
+          "live": "https://rifaterdemsahin.github.io/GeminiImageGenerator/"
+        },
+        {
+          "emoji": "⌨️",
+          "name": "Macro Keyboard",
+          "github": "https://github.com/rifaterdemsahin/macro_keyboard",
+          "live": "https://rifaterdemsahin.github.io/macro_keyboard/"
+        },
+        {
+          "emoji": "🤖",
+          "name": "MCP Protocol",
+          "github": "https://github.com/rifaterdemsahin/mcp",
+          "live": "https://rifaterdemsahin.github.io/mcp/"
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "name": "Audio & Sound",
+      "icon": "🔊",
+      "projects": [
+        {
+          "emoji": "🎵",
+          "name": "Motivational Music",
+          "github": "https://github.com/rifaterdemsahin/music_motivational",
+          "live": "https://rifaterdemsahin.github.io/music_motivational/"
+        },
+        {
+          "emoji": "🔉",
+          "name": "Freesound API",
+          "github": "https://github.com/rifaterdemsahin/Freesound",
+          "live": "https://rifaterdemsahin.github.io/Freesound/"
+        },
+        {
+          "emoji": "🎹",
+          "name": "Beatoven AI",
+          "github": "https://github.com/rifaterdemsahin/beatoven.ai",
+          "live": "https://rifaterdemsahin.github.io/beatoven.ai/"
+        },
+        {
+          "emoji": "🎤",
+          "name": "Speech Assets",
+          "github": "https://github.com/rifaterdemsahin/Speech",
+          "live": "https://rifaterdemsahin.github.io/Speech/"
+        }
+      ]
+    },
+    {
+      "id": "search",
+      "name": "Quick Search",
+      "icon": "🔍",
+      "projects": [
+        {
+          "emoji": "☁️",
+          "name": "Fusion Blur Search",
+          "external": "https://www.youtube.com/results?search_query=fusion+blur"
+        },
+        {
+          "emoji": "📦",
+          "name": "Bookmark Loader",
+          "github": "https://github.com/rifaterdemsahin/bookmark-loader",
+          "live": "https://rifaterdemsahin.github.io/bookmark-loader/"
+        }
+      ]
+    }
+  ]
+}

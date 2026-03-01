@@ -91,9 +91,8 @@ class SearchManager {
   }
 
   async searchMarkdownFiles(query) {
-    // For now, return predefined results based on folder structure
-    // In production, this could search through actual file contents
-    const allPages = [
+    // Load searchable items from various sources
+    let allPages = [
       { title: '1. Real Unknown - The Why', file: '1_Real_Unknown/README.md', description: 'Problem definitions and objectives' },
       { title: '2. Environment - The Context', file: '2_Environment/README.md', description: 'Setup guides and roadmap' },
       { title: '3. Simulation - The Vision', file: '3_Simulation/README.md', description: 'UI mockups and prototypes' },
@@ -106,6 +105,25 @@ class SearchManager {
       { title: 'February 2026 Dashboard', file: 'february-2026.html', description: 'Personal shortcut dashboard for February 2026' },
       { title: 'Video Production Matrix', file: 'video-production.html', description: 'Video production maturity matrix and resources' }
     ];
+
+    // Load video production projects dynamically
+    try {
+      const response = await fetch('data/video-production-links.json');
+      const data = await response.json();
+
+      // Add all video production projects to search
+      data.categories.forEach(category => {
+        category.projects.forEach(project => {
+          allPages.push({
+            title: `${project.emoji} ${project.name}`,
+            file: project.live || project.github || project.external,
+            description: `${category.name} - Video production project`
+          });
+        });
+      });
+    } catch (error) {
+      console.warn('Could not load video production links for search:', error);
+    }
 
     // Fuzzy search implementation
     const fuzzyResults = allPages.filter(page => {
@@ -228,6 +246,14 @@ class SearchManager {
     if (index < 0 || index >= this.results.length) return;
 
     const result = this.results[index];
+
+    // Check if it's an external URL (starts with http/https)
+    if (result.file.startsWith('http://') || result.file.startsWith('https://')) {
+      window.open(result.file, '_blank');
+      return;
+    }
+
+    // Handle local files
     const url = result.file.endsWith('.html')
       ? result.file
       : `markdown_renderer.html?file=${result.file}`;
