@@ -48,6 +48,16 @@
       "icon": "🔖"
     },
     {
+      "title": "Feb 2026",
+      "url": "february-2026.html",
+      "icon": "🚀"
+    },
+    {
+      "title": "Video Prod",
+      "url": "video-production.html",
+      "icon": "🎬"
+    },
+    {
       "title": "Documentation",
       "url": "markdown_renderer.html",
       "icon": "📚"

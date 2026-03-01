@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Production Matrix</title>
+    <title>Video Production Matrix - Bookmark Loader</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #f8fafc; margin: 20px; }
         h1 { color: #38bdf8; border-bottom: 2px solid #38bdf8; padding-bottom: 10px; }
@@ -20,7 +22,40 @@
     </style>
 </head>
 <body>
+    <!-- Debug Menu -->
+    <nav id="debug-menu" class="debug-menu" style="display: none;">
+        <div class="debug-menu-container">
+            <span class="debug-label">DEBUG:</span>
+            <div id="debug-menu-items"></div>
+        </div>
+    </nav>
 
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>🎬 Video Production</h1>
+            </div>
+
+            <div class="nav-search">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search... (Ctrl+K)"
+                    autocomplete="off"
+                />
+                <div id="search-autocomplete" class="autocomplete-dropdown"></div>
+            </div>
+
+            <div class="nav-links" id="nav-links"></div>
+
+            <button id="debug-toggle" class="debug-toggle" title="Toggle Debug Menu">
+                🐛
+            </button>
+        </div>
+    </nav>
+
+    <div style="padding: 20px;">
     <h1>🎬 Video Production Maturity Matrix</h1>
 
     <div class="matrix-grid">
@@ -109,5 +144,26 @@
         </div>
 
     </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <div id="social-links"></div>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2026 Bookmark Loader - A Project Self-Learning System</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/debug.js"></script>
 </body>
 </html>

@@ -102,7 +102,9 @@ class SearchManager {
       { title: '6. Semblance - The Scars', file: '6_Semblance/README.md', description: 'Errors and workarounds' },
       { title: '7. Testing - The Proof', file: '7_Testing_Known/README.md', description: 'Validation and testing' },
       { title: 'Home', file: 'index.html', description: 'Main dashboard' },
-      { title: 'Bookmarks', file: 'bookmarks.html', description: 'Bookmark management' }
+      { title: 'Bookmarks', file: 'bookmarks.html', description: 'Bookmark management' },
+      { title: 'February 2026 Dashboard', file: 'february-2026.html', description: 'Personal shortcut dashboard for February 2026' },
+      { title: 'Video Production Matrix', file: 'video-production.html', description: 'Video production maturity matrix and resources' }
     ];
 
     // Fuzzy search implementation

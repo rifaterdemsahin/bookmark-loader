@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mkdir -p \"1_Real_Unknown\" \"2_Environment\" \"3_Simulation\" \"4_Formula\" \"5_Symbols\" \"6_Semblance\" \"7_Testing_Known\")"
+      "Bash(mkdir -p \"1_Real_Unknown\" \"2_Environment\" \"3_Simulation\" \"4_Formula\" \"5_Symbols\" \"6_Semblance\" \"7_Testing_Known\")",
+      "Bash(git pull origin main)"
     ],
     "deny": [],
     "ask": []
