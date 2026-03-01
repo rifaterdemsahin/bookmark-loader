@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Bookmark Loader</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <style>
+        .markdown-content {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--surface);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .markdown-content h1 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .markdown-content h2 {
+            color: var(--text-primary);
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .markdown-content h3 {
+            color: var(--text-primary);
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .markdown-content pre {
+            background-color: #2d2d2d;
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            overflow-x: auto;
+            margin: var(--spacing-md) 0;
+        }
+
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.375rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875em;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        .markdown-content pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .markdown-content a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .markdown-content a:hover {
+            text-decoration: underline;
+        }
+
+        .markdown-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-md) 0;
+        }
+
+        .markdown-content th,
+        .markdown-content td {
+            border: 1px solid var(--border);
+            padding: var(--spacing-sm) var(--spacing-md);
+            text-align: left;
+        }
+
+        .markdown-content th {
+            background-color: var(--background);
+            font-weight: 600;
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid var(--primary);
+            padding-left: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .markdown-content ul,
+        .markdown-content ol {
+            margin: var(--spacing-md) 0;
+            padding-left: var(--spacing-xl);
+        }
+
+        .markdown-content li {
+            margin: var(--spacing-sm) 0;
+        }
+
+        .markdown-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .file-selector {
+            max-width: 900px;
+            margin: 2rem auto 0;
+            padding: 0 2rem;
+        }
+
+        .file-selector select {
+            width: 100%;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-base);
+            background-color: var(--surface);
+        }
+
+        .loading {
+            text-align: center;
+            padding: var(--spacing-2xl);
+            color: var(--text-secondary);
+        }
+
+        .error {
+            background-color: #fee2e2;
+            color: #991b1b;
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-md) 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Debug Menu -->
+    <nav id="debug-menu" class="debug-menu" style="display: none;">
+        <div class="debug-menu-container">
+            <span class="debug-label">DEBUG:</span>
+            <div id="debug-menu-items"></div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>📚 Documentation</h1>
+            </div>
+
+            <div class="nav-search">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search documentation... (Ctrl+K)"
+                    autocomplete="off"
+                />
+                <div id="search-autocomplete" class="autocomplete-dropdown"></div>
+            </div>
+
+            <div class="nav-links" id="nav-links"></div>
+
+            <button id="debug-toggle" class="debug-toggle" title="Toggle Debug Menu">
+                🐛
+            </button>
+        </div>
+    </nav>
+
+    <!-- File Selector -->
+    <div class="file-selector">
+        <select id="file-select">
+            <option value="">Select a documentation file...</option>
+            <optgroup label="Framework Stages">
+                <option value="1_Real_Unknown/README.md">1. Real Unknown - The Why</option>
+                <option value="2_Environment/README.md">2. Environment - The Context</option>
+                <option value="3_Simulation/README.md">3. Simulation - The Vision</option>
+                <option value="4_Formula/README.md">4. Formula - The Recipe</option>
+                <option value="5_Symbols/README.md">5. Symbols - The Reality</option>
+                <option value="6_Semblance/README.md">6. Semblance - The Scars</option>
+                <option value="7_Testing_Known/README.md">7. Testing - The Proof</option>
+            </optgroup>
+            <optgroup label="AI Agent Instructions">
+                <option value="aigent.md">General AI Agent Instructions</option>
+                <option value="claude.md">Claude-Specific Instructions</option>
+                <option value="kilocode.md">KiloCode-Specific Instructions</option>
+                <option value="gemini.md">Gemini-Specific Instructions</option>
+                <option value="copilot.md">GitHub Copilot Instructions</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <!-- Markdown Content -->
+    <div class="markdown-content" id="markdown-content">
+        <div class="loading">Loading documentation...</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <div id="social-links"></div>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2026 Bookmark Loader - A Project Self-Learning System</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/debug.js"></script>
+    <script>
+        // Markdown Renderer
+        class MarkdownRenderer {
+            constructor() {
+                this.contentElement = document.getElementById('markdown-content');
+                this.fileSelect = document.getElementById('file-select');
+                this.init();
+            }
+
+            init() {
+                // Configure marked.js
+                marked.setOptions({
+                    breaks: true,
+                    gfm: true,
+                    highlight: function(code, lang) {
+                        if (Prism.languages[lang]) {
+                            return Prism.highlight(code, Prism.languages[lang], lang);
+                        }
+                        return code;
+                    }
+                });
+
+                // Check for file parameter in URL
+                const params = new URLSearchParams(window.location.search);
+                const fileParam = params.get('file');
+
+                if (fileParam) {
+                    this.fileSelect.value = fileParam;
+                    this.loadMarkdownFile(fileParam);
+                }
+
+                // File selector change event
+                this.fileSelect.addEventListener('change', (e) => {
+                    const file = e.target.value;
+                    if (file) {
+                        this.loadMarkdownFile(file);
+                        // Update URL parameter
+                        const url = new URL(window.location);
+                        url.searchParams.set('file', file);
+                        window.history.pushState({}, '', url);
+                    }
+                });
+
+                // Handle browser back/forward
+                window.addEventListener('popstate', () => {
+                    const params = new URLSearchParams(window.location.search);
+                    const fileParam = params.get('file');
+                    if (fileParam) {
+                        this.fileSelect.value = fileParam;
+                        this.loadMarkdownFile(fileParam);
+                    }
+                });
+            }
+
+            async loadMarkdownFile(filePath) {
+                this.contentElement.innerHTML = '<div class="loading">Loading...</div>';
+
+                try {
+                    const response = await fetch(filePath);
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+
+                    const markdown = await response.text();
+                    const html = marked.parse(markdown);
+
+                    this.contentElement.innerHTML = html;
+
+                    // Re-run Prism syntax highlighting
+                    Prism.highlightAllUnder(this.contentElement);
+
+                    // Smooth scroll to top
+                    this.contentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                    // Process internal links
+                    this.processInternalLinks();
+
+                } catch (error) {
+                    this.contentElement.innerHTML = `
+                        <div class="error">
+                            <strong>Error loading file:</strong> ${error.message}
+                            <br><br>
+                            <small>File path: ${filePath}</small>
+                        </div>
+                    `;
+                    console.error('Failed to load markdown:', error);
+                }
+            }
+
+            processInternalLinks() {
+                // Convert relative markdown links to use markdown_renderer.html
+                const links = this.contentElement.querySelectorAll('a[href$=".md"]');
+
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+
+                    // Skip external links
+                    if (href.startsWith('http://') || href.startsWith('https://')) {
+                        return;
+                    }
+
+                    // Convert to markdown_renderer.html?file=...
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const url = new URL(window.location);
+                        url.searchParams.set('file', href);
+                        window.history.pushState({}, '', url);
+                        this.fileSelect.value = href;
+                        this.loadMarkdownFile(href);
+                    });
+                });
+            }
+        }
+
+        // Initialize markdown renderer
+        const markdownRenderer = new MarkdownRenderer();
+    </script>
+</body>
+</html>

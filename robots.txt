@@ -1,0 +1,14 @@
+# robots.txt for Bookmark Loader
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://[username].github.io/bookmark-loader/sitemap.xml
+
+# Disallow indexing of obsolete content
+Disallow: /*_obsolete/
+
+# Disallow indexing of test/development files
+Disallow: /test/
+Disallow: /*.json$

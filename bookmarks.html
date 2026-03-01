@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks - Bookmark Loader</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Debug Menu -->
+    <nav id="debug-menu" class="debug-menu" style="display: none;">
+        <div class="debug-menu-container">
+            <span class="debug-label">DEBUG:</span>
+            <div id="debug-menu-items"></div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>🔖 My Bookmarks</h1>
+            </div>
+
+            <div class="nav-search">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search bookmarks... (Ctrl+K)"
+                    autocomplete="off"
+                />
+                <div id="search-autocomplete" class="autocomplete-dropdown"></div>
+            </div>
+
+            <div class="nav-links" id="nav-links"></div>
+
+            <button id="debug-toggle" class="debug-toggle" title="Toggle Debug Menu">
+                🐛
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="container" style="padding: 2rem; min-height: 60vh;">
+        <div style="text-align: center; padding: 4rem 2rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+                🚧 Under Construction
+            </h2>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                The bookmark dashboard is coming soon!
+            </p>
+            <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius-lg); max-width: 600px; margin: 0 auto; text-align: left;">
+                <h3 style="margin-bottom: 1rem;">Planned Features:</h3>
+                <ul style="list-style-position: inside; color: var(--text-secondary);">
+                    <li>Visual bookmark cards with emoji categories</li>
+                    <li>Color-coded organization</li>
+                    <li>Monthly grouping</li>
+                    <li>Quick search and filter</li>
+                    <li>Import/export bookmarks</li>
+                    <li>Drag-and-drop organization</li>
+                </ul>
+            </div>
+            <div style="margin-top: 2rem;">
+                <a href="markdown_renderer.html?file=4_Formula/README.md" class="btn btn-primary">
+                    View Implementation Plan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <div id="social-links"></div>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2026 Bookmark Loader - A Project Self-Learning System</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/debug.js"></script>
+</body>
+</html>
