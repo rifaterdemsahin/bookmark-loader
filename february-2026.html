@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Shortcut Dashboard</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f1f5f9;
+            --accent: #38bdf8;
+            --group-local: #fbbf24;
+            --group-ai: #a78bfa;
+            --group-admin: #f87171;
+            --group-media: #4ade80;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 { text-align: center; color: var(--accent); margin-bottom: 30px; }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--accent);
+        }
+
+        .category h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: all 0.2s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+
+        a:hover {
+            background: #334155;
+            color: white;
+            padding-left: 15px;
+        }
+
+        /* Color Coding by Category */
+        .cat-local { border-color: var(--group-local); }
+        .cat-ai { border-color: var(--group-ai); }
+        .cat-admin { border-color: var(--group-admin); }
+        .cat-media { border-color: var(--group-media); }
+
+        .emoji { font-style: normal; }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 Workspace Dashboard</h1>
+
+    <div class="dashboard">
+
+        <div class="category cat-local">
+            <h2><span class="emoji">💻</span> Local & Dev Env</h2>
+            <div class="links">
+                <a href="http://localhost:9090/graph">📊 Prometheus Graph (9090)</a>
+                <a href="http://localhost:3000/MapOfConsciousness">🗺️ Map of Consciousness (3000)</a>
+                <a href="http://localhost:3001/">🛠️ Localhost 3001</a>
+                <a href="http://localhost:7860/">🤖 Stable Diffusion/AI (7860)</a>
+                <a href="http://192.168.2.227:6333/dashboard">📦 Qdrant Dashboard</a>
+                <a href="http://192.168.3.1/#Dashboard">🌐 Router Admin</a>
+                <a href="http://localhost:3000/a/grafana-metricsdrilldown-app/drilldown">📈 Grafana Drilldown</a>
+            </div>
+        </div>
+
+        <div class="category cat-ai">
+            <h2><span class="emoji">🧠</span> AI & LLM Hub</h2>
+            <div class="links">
+                <a href="https://gemini.google.com/">✨ Google Gemini</a>
+                <a href="https://claude.ai/">☁️ Anthropic Claude</a>
+                <a href="https://chatgpt.com/">💬 ChatGPT</a>
+                <a href="https://grok.com/">🐦 xAI Grok</a>
+                <a href="https://fal.ai/dashboard/keys">🔑 Fal.ai Keys</a>
+                <a href="https://huggingface.co/models">🤗 Hugging Face</a>
+                <a href="https://openrouter.ai/models">🔌 OpenRouter</a>
+                <a href="https://aistudio.google.com/api-keys">🧪 Google AI Studio</a>
+            </div>
+        </div>
+
+        <div class="category cat-media">
+            <h2><span class="emoji">🎬</span> Media & Creative</h2>
+            <div class="links">
+                <a href="https://www.blackmagicdesign.com/products/davinciresolve/training">🎞️ DaVinci Training</a>
+                <a href="https://elevenlabs.io/app/home">🗣️ ElevenLabs Voice</a>
+                <a href="https://freesound.org/">🔊 Freesound.org</a>
+                <a href="https://mixkit.co/">🎵 Mixkit Assets</a>
+                <a href="https://studio.youtube.com/">📺 YouTube Studio</a>
+                <a href="https://marketplace.elgato.com/">⌨️ Stream Deck Store</a>
+                <a href="https://acestudio.ai/">🎤 Ace Studio</a>
+            </div>
+        </div>
+
+        <div class="category cat-admin">
+            <h2><span class="emoji">🏢</span> Admin & Finance</h2>
+            <div class="links">
+                <a href="https://mail.google.com/mail/u/0/#drafts">📩 Gmail Drafts</a>
+                <a href="https://admin.google.com/">⚙️ Google Admin</a>
+                <a href="https://console.cloud.google.com/billing">💳 GCP Billing</a>
+                <a href="https://accounts.intuit.com/app/sign-in?app_group=QBO">🧾 QuickBooks Online</a>
+                <a href="https://github.com/settings/billing/usage">🐙 GitHub Billing</a>
+                <a href="https://www.us.fieldglass.cloud.sap/">📄 SAP Fieldglass</a>
+                <a href="https://calendly.com/app/scheduled_events/user/me">📅 Calendly Events</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2><span class="emoji">📂</span> Repos & Files</h2>
+            <div class="links">
+                <a href="https://github.com/rifaterdemsahin/delivery-pilot-web">🚚 Delivery Pilot Web</a>
+                <a href="https://github.com/rifaterdemsahin/fal.ai">🧬 Fal.ai Repo</a>
+                <a href="https://drive.google.com/drive/folders/1Aw7z1fhBPbMKdd_1oswbzaWk6Q2gLtJf">📁 Shared Drive Folder</a>
+                <a href="https://rifaterdemsahin.github.io/diagram-animations/">📉 Diagram Animations</a>
+                <a href="https://github.com/rifaterdemsahin/steam-pi">🥧 Steam Pi</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2><span class="emoji">🎓</span> Learning & Social</h2>
+            <div class="links">
+                <a href="https://www.coursera.org/learn/secure-ai-interpret-and-protect-models">🛡️ Coursera AI Security</a>
+                <a href="https://lab.aliabdaal.com/feed">🧪 Ali Abdaal Lab</a>
+                <a href="https://web.telegram.org/a/">✈️ Telegram Web</a>
+                <a href="https://discord.com/channels/@me">👾 Discord</a>
+                <a href="https://www.linkedin.com/messaging/">🔗 LinkedIn Messages</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
