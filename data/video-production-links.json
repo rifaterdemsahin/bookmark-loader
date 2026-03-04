@@ -9,25 +9,29 @@
           "emoji": "📊",
           "name": "Maturity Matrix",
           "github": "https://github.com/rifaterdemsahin/video-production-maturity-matrix",
-          "live": "https://rifaterdemsahin.github.io/video-production-maturity-matrix/"
+          "live": "https://rifaterdemsahin.github.io/video-production-maturity-matrix/",
+          "backup": ""
         },
         {
           "emoji": "📅",
           "name": "Weekly Plan",
           "github": "https://github.com/rifaterdemsahin/VideoProductionPlanNovemberWeek3",
-          "live": "https://rifaterdemsahin.github.io/VideoProductionPlanNovemberWeek3/"
+          "live": "https://rifaterdemsahin.github.io/VideoProductionPlanNovemberWeek3/",
+          "backup": ""
         },
         {
           "emoji": "🛠️",
           "name": "Production Pipeline",
           "github": "https://github.com/rifaterdemsahin/VideoProductionPipeline",
-          "live": "https://rifaterdemsahin.github.io/VideoProductionPipeline/"
+          "live": "https://rifaterdemsahin.github.io/VideoProductionPipeline/",
+          "backup": ""
         },
         {
           "emoji": "🧠",
           "name": "Self Learning Framework",
           "github": "https://github.com/rifaterdemsahin/SelfLearningFramework",
-          "live": "https://rifaterdemsahin.github.io/SelfLearningFramework/"
+          "live": "https://rifaterdemsahin.github.io/SelfLearningFramework/",
+          "backup": ""
         }
       ]
     },
@@ -40,31 +44,36 @@
           "emoji": "🎨",
           "name": "Lower Thirds",
           "github": "https://github.com/rifaterdemsahin/transparent-lowerthird",
-          "live": "https://rifaterdemsahin.github.io/transparent-lowerthird/"
+          "live": "https://rifaterdemsahin.github.io/transparent-lowerthird/",
+          "backup": ""
         },
         {
           "emoji": "🎞️",
           "name": "Diagram Anims",
           "github": "https://github.com/rifaterdemsahin/diagram-animations",
-          "live": "https://rifaterdemsahin.github.io/diagram-animations/"
+          "live": "https://rifaterdemsahin.github.io/diagram-animations/",
+          "backup": ""
         },
         {
           "emoji": "📐",
           "name": "Manim Engine",
           "github": "https://github.com/rifaterdemsahin/Manim",
-          "live": "https://rifaterdemsahin.github.io/Manim/"
+          "live": "https://rifaterdemsahin.github.io/Manim/",
+          "backup": ""
         },
         {
           "emoji": "🍭",
           "name": "Lottie Files",
           "github": "https://github.com/rifaterdemsahin/lottie-animations",
-          "live": "https://rifaterdemsahin.github.io/lottie-animations/"
+          "live": "https://rifaterdemsahin.github.io/lottie-animations/",
+          "backup": ""
         },
         {
           "emoji": "🎥",
           "name": "Remotion Core",
           "github": "https://github.com/rifaterdemsahin/remotion",
-          "live": "https://rifaterdemsahin.github.io/remotion/"
+          "live": "https://rifaterdemsahin.github.io/remotion/",
+          "backup": ""
         }
       ]
     },
@@ -77,31 +86,36 @@
           "emoji": "🦙",
           "name": "Ollama AI",
           "github": "https://github.com/rifaterdemsahin/ollama",
-          "live": "https://rifaterdemsahin.github.io/ollama/"
+          "live": "https://rifaterdemsahin.github.io/ollama/",
+          "backup": ""
         },
         {
           "emoji": "🔗",
           "name": "n8n Workflows",
           "github": "https://github.com/rifaterdemsahin/n8n",
-          "live": "https://rifaterdemsahin.github.io/n8n/"
+          "live": "https://rifaterdemsahin.github.io/n8n/",
+          "backup": ""
         },
         {
           "emoji": "🖼️",
           "name": "Gemini Generator",
           "github": "https://github.com/rifaterdemsahin/GeminiImageGenerator",
-          "live": "https://rifaterdemsahin.github.io/GeminiImageGenerator/"
+          "live": "https://rifaterdemsahin.github.io/GeminiImageGenerator/",
+          "backup": ""
         },
         {
           "emoji": "⌨️",
           "name": "Macro Keyboard",
           "github": "https://github.com/rifaterdemsahin/macro_keyboard",
-          "live": "https://rifaterdemsahin.github.io/macro_keyboard/"
+          "live": "https://rifaterdemsahin.github.io/macro_keyboard/",
+          "backup": ""
         },
         {
           "emoji": "🤖",
           "name": "MCP Protocol",
           "github": "https://github.com/rifaterdemsahin/mcp",
-          "live": "https://rifaterdemsahin.github.io/mcp/"
+          "live": "https://rifaterdemsahin.github.io/mcp/",
+          "backup": ""
         }
       ]
     },
@@ -114,25 +128,29 @@
           "emoji": "🎵",
           "name": "Motivational Music",
           "github": "https://github.com/rifaterdemsahin/music_motivational",
-          "live": "https://rifaterdemsahin.github.io/music_motivational/"
+          "live": "https://rifaterdemsahin.github.io/music_motivational/",
+          "backup": ""
         },
         {
           "emoji": "🔉",
           "name": "Freesound API",
           "github": "https://github.com/rifaterdemsahin/Freesound",
-          "live": "https://rifaterdemsahin.github.io/Freesound/"
+          "live": "https://rifaterdemsahin.github.io/Freesound/",
+          "backup": ""
         },
         {
           "emoji": "🎹",
           "name": "Beatoven AI",
           "github": "https://github.com/rifaterdemsahin/beatoven.ai",
-          "live": "https://rifaterdemsahin.github.io/beatoven.ai/"
+          "live": "https://rifaterdemsahin.github.io/beatoven.ai/",
+          "backup": ""
         },
         {
           "emoji": "🎤",
           "name": "Speech Assets",
           "github": "https://github.com/rifaterdemsahin/Speech",
-          "live": "https://rifaterdemsahin.github.io/Speech/"
+          "live": "https://rifaterdemsahin.github.io/Speech/",
+          "backup": ""
         }
       ]
     },
@@ -144,22 +162,26 @@
         {
           "emoji": "📝",
           "name": "HTML Online Viewer",
-          "external": "https://html.onlineviewer.net/"
+          "external": "https://html.onlineviewer.net/",
+          "backup": ""
         },
         {
           "emoji": "☁️",
           "name": "Claude AI",
-          "external": "https://claude.ai/"
+          "external": "https://claude.ai/",
+          "backup": ""
         },
         {
           "emoji": "🐦",
           "name": "Grok AI",
-          "external": "https://grok.com/"
+          "external": "https://grok.com/",
+          "backup": ""
         },
         {
           "emoji": "✨",
           "name": "Gemini AI",
-          "external": "https://gemini.google.com/"
+          "external": "https://gemini.google.com/",
+          "backup": ""
         }
       ]
     },
@@ -171,13 +193,15 @@
         {
           "emoji": "☁️",
           "name": "Fusion Blur Search",
-          "external": "https://www.youtube.com/results?search_query=fusion+blur"
+          "external": "https://www.youtube.com/results?search_query=fusion+blur",
+          "backup": ""
         },
         {
           "emoji": "📦",
           "name": "Bookmark Loader",
           "github": "https://github.com/rifaterdemsahin/bookmark-loader",
-          "live": "https://rifaterdemsahin.github.io/bookmark-loader/"
+          "live": "https://rifaterdemsahin.github.io/bookmark-loader/",
+          "backup": ""
         }
       ]
     }

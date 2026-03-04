@@ -19,6 +19,7 @@
         .dual-link { display: flex; gap: 10px; }
         .badge { font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; background: #334155; color: #cbd5e1; }
         .badge-live { background: #059669; color: white; }
+        .badge-backup { background: #0369a1; color: white; }
     </style>
 </head>
 <body>
@@ -88,9 +89,10 @@
                                 <span class="emoji">${project.emoji}</span>
                                 <a href="${project.github || project.external}">${project.name}</a>
                             </span>
-                            ${project.live ? `
+                            ${(project.live || project.backup) ? `
                                 <div class="dual-link">
-                                    <a href="${project.live}" class="badge badge-live" target="_blank">LIVE</a>
+                                    ${project.live ? `<a href="${project.live}" class="badge badge-live" target="_blank">LIVE</a>` : ''}
+                                    ${project.backup ? `<a href="${project.backup}" class="badge badge-backup" target="_blank">BACKUP</a>` : ''}
                                 </div>
                             ` : ''}
                         </div>
