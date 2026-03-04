@@ -89,10 +89,10 @@
                                 <span class="emoji">${project.emoji}</span>
                                 <a href="${project.github || project.external}">${project.name}</a>
                             </span>
-                            ${(project.live || project.github) ? `
+                            ${(project.live || project.backup) ? `
                                 <div class="dual-link">
                                     ${project.live ? `<a href="${project.live}" class="badge badge-live" target="_blank">LIVE</a>` : ''}
-                                    ${project.github ? `<a href="${project.github}" class="badge badge-backup" target="_blank">BACKUP</a>` : ''}
+                                    ${project.backup ? `<a href="${project.backup}" class="badge badge-backup" target="_blank">BACKUP</a>` : ''}
                                 </div>
                             ` : ''}
                         </div>
