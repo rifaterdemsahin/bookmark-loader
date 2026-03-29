@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bookmarks — May 2026</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/responsive.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -12,7 +14,7 @@
       background: #0a0a0f;
       color: #d1d5db;
       min-height: 100vh;
-      padding: 2rem 1.5rem 4rem;
+      padding: 5rem 1.5rem 4rem;
     }
 
     header {
@@ -126,6 +128,25 @@
   </style>
 </head>
 <body>
+    <!-- Debug Menu -->
+    <nav id="debug-menu" class="debug-menu" style="display: none;">
+        <div class="debug-menu-container">
+            <span class="debug-label">DEBUG:</span>
+            <div id="debug-menu-items"></div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>📌 Bookmarks May 2026</h1>
+            </div>
+            <div class="nav-links" id="nav-links"></div>
+            <button id="debug-toggle" class="debug-toggle" title="Toggle Debug Menu">🐛</button>
+        </div>
+    </nav>
+
 
 <header>
   <h1>📌 Bookmarks — May 2026</h1>
@@ -310,5 +331,8 @@
   Generated 2026-03-29 &nbsp;·&nbsp; <a href="https://claude.ai/code">Claude Code</a>
 </footer>
 
+    <script src="../js/menu.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/debug.js"></script>
 </body>
 </html>

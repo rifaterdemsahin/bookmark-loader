@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bookmark Dashboard - Visual organization for single-click access to your bookmarks">
+    <title>Bookmark Loader - Smart Bookmark Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Debug Menu (hidden by default, shown when debug cookie is set) -->
+    <nav id="debug-menu" class="debug-menu" style="display: none;">
+        <div class="debug-menu-container">
+            <span class="debug-label">DEBUG:</span>
+            <div id="debug-menu-items"></div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>🔖 Bookmark Loader</h1>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="nav-search">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search bookmarks... (Ctrl+K)"
+                    autocomplete="off"
+                />
+                <div id="search-autocomplete" class="autocomplete-dropdown"></div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="nav-links" id="nav-links"></div>
+
+            <!-- Debug Toggle Button -->
+            <button id="debug-toggle" class="debug-toggle" title="Toggle Debug Menu">
+                🐛
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Smart Bookmark Dashboard</h2>
+            <p>Visual organization with single-click access to your monthly bookmarks</p>
+            <div class="hero-actions">
+                <a href="bookmarks.html" class="btn btn-primary">View Bookmarks</a>
+                <a href="markdown_renderer.html" class="btn btn-secondary">Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🎨</span>
+                    <h3>Visual Grouping</h3>
+                    <p>Color-coded categories with emoji indicators for instant recognition</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📅</span>
+                    <h3>Monthly Organization</h3>
+                    <p>Group bookmarks by month for time-based organization</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <h3>Smart Search</h3>
+                    <p>Fuzzy search with autocomplete for instant bookmark discovery</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Responsive Design</h3>
+                    <p>Perfect layout on desktop, tablet, and mobile devices</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Fast Performance</h3>
+                    <p>Loads in under 2 seconds with smooth interactions</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💾</span>
+                    <h3>No Backend Needed</h3>
+                    <p>All data stored locally in your browser</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <div id="social-links"></div>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2026 Bookmark Loader - A Project Self-Learning System</p>
+                    <p>Built with the 7-stage framework: Unknown → Proven</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/menu.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/debug.js"></script>
+</body>
+</html>
